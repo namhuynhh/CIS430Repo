@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tabs Mobile 1</title>
+
+	<meta name="viewport" 
+		  content="width=device-width, user-scalable=no, 
+		  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<!-- This is not a secure content policy, should be locked down for prod -->
+	<meta http-equiv="Content-Security-Policy" 
+		content="default-src 'self' data: gap: 'unsafe-inline' 
+					https://ssl.gstatic.com https://*.phonegap.com; 
+				style-src 'self' 'unsafe-inline'; 
+				script-src  'self' 'unsafe-inline' 'unsafe-eval' 
+					https://*.phonegap.com ;
+				media-src *" />	
+		           
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+</head>
+<body> <!-- no onload - see index.js for "ondeviceready" event listener -->
+
+
+<body> <!-- no onload - see index.js for "ondeviceready" event listener -->
+
+	<ul class="tab">
+		<li><a href="#" class="tabLink" id="home" onclick="showTab(event, 'Red'  )">Red  </a></li>
+		<li><a href="#" class="tabLink"           onclick="showTab(event, 'Green')">Green</a></li>
+		<li><a href="#" class="tabLink"           onclick="showTab(event, 'Blue' )">Blue </a></li>
+		<li><a href="#" class="tabLink"           onclick="showTab(event, 'About')">About</a></li>
+	</ul>
+
+	<div id="Red" 	class="tabContent" style="background-color: rgba(255, 0, 0, 0.650)">
+		<h3>Red</h3>
+		<p>
+			Red is the color at the longer-wavelengths end of the spectrum of 
+			visible light next to orange, at the opposite end from violet. Red 
+			color has a predominant light wavelength of roughly 620–740 
+			nanometers. Light with a longer wavelength than red but shorter 
+			than terahertz radiation and microwave is called infrared.
+		</p>
+	</div>
+
+	<div id="Green" class="tabContent" style="background-color: rgba(0, 255, 0, 0.650)">
+		<h3>Green</h3>
+		<p>
+			Green is the color between blue and yellow on the spectrum of 
+			visible light. It is evoked by light with a predominant wavelength 
+			of roughly 495–570 nm. In the subtractive color system, used in 
+			painting and color printing, it is created by a combination of 
+			yellow and blue, or yellow and cyan; in the RGB color model, used 
+			on television and computer screens, it is one of the additive 
+			primary colors, along with red and blue, which are mixed in 
+			different combinations to create all other colors.
+		</p>
+	</div>
+
+	<div id="Blue" 	class="tabContent" style="background-color: rgba(0, 0, 255, 0.650)">
+		<h3>Blue</h3>
+		<p>
+			Blue is the colour between violet and green on the optical spectrum 
+			of visible light. Human eyes perceive blue when observing light 
+			with a wavelength between 450 and 495 nanometres, which is between 
+			45 and 49.5 Ångströms. Blues with a higher frequency and thus a 
+			shorter wavelength gradually look more violet, while those with a 
+			lower frequency and a longer wavelength gradually appear more 
+			green. Pure blue, in the middle, has a wavelength of 470 nanometers 
+			(47 Ångströms). In painting and traditional colour theory, blue is 
+			one of the three primary colours of pigments, along with red and 
+			yellow, which can be mixed to form a wide gamut of colours. Red and 
+			blue mixed together form violet, blue and yellow together form 
+			green. Blue is also a primary colour in the RGB colour model, used 
+			to create all the colours on the screen of a television or 
+			computer monitor.
+		</p>
+	</div>
+
+	<div id="About" class="tabContent">
+		<h3>About</h3>
+		<p>
+			Inspired from: 
+			<a 	href="http://www.w3schools.com/howto/howto_js_tabs.asp" 
+				target="_blank">
+				W3Schools Tabs "How-TO"</a>
+			<br><br>
+			With contributions from CIS 430 scholars:
+			<br> 
+			Alexander Edwards and Aaron Croutch. 
+			<br><br>
+			The text about the colors are from the Wikipedia.
+		</p>
+	</div>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+
+</body>
+</html>
