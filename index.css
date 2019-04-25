@@ -1,40 +1,29 @@
-		/* Start Reactive Code Template */ 
-		* {
-			box-sizing: 	border-box;
+* {
+			margin: 				0;
+			box-sizing: 			border-box;			
 		}
 
-		.col-01 {width:  8.33%; background-color:#ff0000;} /* red     */
-		.col-02 {width: 16.66%; background-color:#00ff00;} /* lime    */
-		.col-03 {width: 25.00%; background-color:#0000ff;} /* blue    */
-		.col-04 {width: 33.33%; background-color:#ffff00;} /* yellow  */
-		.col-05 {width: 41.66%; background-color:#00ffff;} /* aqua    */
-		.col-06 {width: 50.00%; background-color:#ff00ff;} /* fucshia */
-		.col-07 {width: 58.33%; background-color:#800000;} /* maroon  */
-		.col-08 {width: 66.66%; background-color:#008000;} /* green   */
-		.col-09 {width: 75.00%; background-color:#000080;} /* navy    */
-		.col-10 {width: 83.33%; background-color:#808000;} /* olive   */
-		.col-11 {width: 91.66%; background-color:#008080;} /* teal    */
-		.col-12 {width:100.00%; background-color:#800080;} /* purple  */
-
-		[class*="col-"] {
-			float: 		left;
-			border: 	4px solid #fff;
-		}
-
-		.row { 
-			text-align: center; 
-		}
-
-		.row::after {
-			content: "";
-			clear: both;
-			display: block;
+		html, body {
+			font-family: 			sans-serif;
+			height: 				100vh;
 		}
 
 		p { 
-			font-family:  	sans-serif;  	
-			font-weight: 	bold;
-			color: 			white;
-			text-shadow:  	1px 1px #000;
+			margin: 				5vh; 
 		}
-		/* End Reactive Code Template */ 
+
+		img { 
+			transform: 				rotate(0deg);
+			width: 					5vh; 
+			float: 					left; 
+		}
+		
+		.content { 
+			float: 					bottom; 
+			display: 				none;
+		}
+		.break {clear: both;}
+
+		h3 {
+			font-size: 				5vh;
+		}		
