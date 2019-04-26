@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <meta name="viewport" content="width=device-width initial-scale=1.0">
-  <title>Perfect Fit</title>
+    
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Perfect Fit</title>
 </head>
 <body>
 
@@ -64,10 +68,11 @@
    <button onclick="toggle(this, 'Camera')"> Camera </button>
   </div>
   <h3></h3>
-  <div id="Camera"  class="content">
-    <p>
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis voluptates, id aut, commodi nostrum numquam amet eligendi quis explicabo laborum modi at quasi cumque temporibus incidunt nulla ex, adipisci!
-    </p>
+  <div id="Camera" class="content">
+      <h3>Take Photo</h3>
+      <button id="takePhotoButtonId" type="button" class="btn btn-info btn-lg" onclick="takePhoto()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
+      <br>
+      <p id="photoStatusId"></p>
   </div>
 <!--  Camera Tab - End  -->
 
