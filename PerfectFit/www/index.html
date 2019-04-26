@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tabs Mobile 1</title>
+
+	<meta name="viewport" 
+		  content="width=device-width, user-scalable=no, 
+		  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<!-- This is not a secure content policy, should be locked down for prod -->
+	<!-- <meta http-equiv="Content-Security-Policy" 
+		content="default-src 'self' data: gap: 'unsafe-inline' 
+					https://ssl.gstatic.com https://*.phonegap.com; 
+				style-src 'self' 'unsafe-inline'; 
+				script-src  'self' 'unsafe-inline' 'unsafe-eval' 
+					https://*.phonegap.com ;
+				media-src *" />	 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	           
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body> <!-- no onload - see index.js for "ondeviceready" event listener -->
+
+
+<body> <!-- no onload - see index.js for "ondeviceready" event listener -->
+
+	<ul class="tab">
+		<li><a href="#" class="tabLink"  id="home"   onclick="showTab(event, 'Login')">Login</a></li>
+		<li><a href="#" class="tabLink" 			 onclick="showTab(event, 'Take'  )">Take Photo</a></li>
+		<li><a href="#" class="tabLink"           	 onclick="showTab(event, 'Show')">Show Photo</a></li>
+		<li><a href="#" class="tabLink"              onclick="showTab(event, 'Result' )">Result</a></li>
+		
+	</ul>
+
+	<div id="Login" class="tabContent">
+		<h3>Login</h3>
+		<form action="action_page.php">
+  			<div class="imgcontainer">
+    			<img src="img_avatar2.png" alt="Avatar" class="avatar">
+ 			</div>
+
+  			<div class="container">
+    			<label for="uname"><b>Username</b></label>
+    				<input type="text" placeholder="Enter Username" name="uname" required>
+
+    			<label for="psw"><b>Password</b></label>
+    				<input type="password" placeholder="Enter Password" name="psw" required>
+
+    			<button type="submit">Login</button>
+    			<label>
+      				<input type="checkbox" checked="checked" name="remember"> Remember me
+    			</label>
+ 			 </div>
+
+  			<div class="container" style="background-color:#f1f1f1">
+    			<button type="button" class="cancelbtn">Cancel</button>
+    			<span class="psw">Forgot <a href="#">password?</a></span>
+  			</div>
+		</form> 
+	</div>
+
+	<div id="Take" 	class="tabContent" style="background-color: rgba(255, 0, 0, 0.650)">
+		<h3>Take Photo</h3>
+		<button id="takePhotoButtonId" type="button" class="btn btn-info btn-lg" onclick="takePhoto()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
+		<br>
+		<p id="photoStatusId"></p>
+
+	</div>
+
+	<div id="Show" class="tabContent" style="background-color: rgba(0, 255, 0, 0.650)">
+
+		<h3>Show Photo</h3>
+		<p><img src="" alt="image" id="photoImageId"></p>
+		<br>
+		<pre id=imageFilenameId></pre>
+
+	</div>
+
+	<div id="Result" 	class="tabContent" style="background-color: rgba(0, 0, 255, 0.650)">
+		<h3>Result</h3>
+		
+	</div>
+
+	
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+
+</body>
+</html>
