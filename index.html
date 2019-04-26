@@ -11,84 +11,83 @@
 </head>
 <body>
 
- <div class="divider" >
-   <button onclick="toggle(this, 'Login')"> Login </button>
-  </div>
-  
-  <!-- Login Tab - Start -->
-  <h3></h3>
+    <div class="divider">
+        <button onclick="toggle(this, 'Login')"> Login </button>
+    </div>
 
-  <div id="Login" class="content">
-    
-      <form action="action_page.php">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
+    <!-- Login Tab - Start -->
+    <h3></h3>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <div id="Login" class="content">
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+        <form action="action_page.php">
+            <div class="imgcontainer">
+                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
 
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form> 
-    
-  </div>
-  <!-- Login Tab - End -->
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
 
-  <div class='break'></div>
-    
-   <!--  Home Tab - Start  -->
-  <div class="divider" >
-    <button onclick="toggle(this, 'Home')"> Home </button>
-  </div>
-  <h3></h3>
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
 
-  <div id="Home" class="content" >
-    <p>
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum tempore, in, sunt porro ullam recusandae vero, tempora ea dicta deserunt, explicabo alias. Excepturi aut numquam, inventore delectus. Autem, aut, sint!
-    </p>
-  </div>
- <!--  Home Tab - End  -->
-  <div class='break'></div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
 
-<!--  Camera Tab - Start  -->
-  <div class="divider" >
-   <button onclick="toggle(this, 'Camera')"> Camera </button>
-  </div>
-  <h3></h3>
-  <div id="Camera" class="content">
-      <h3>Take Photo</h3>
-      <button id="takePhotoButtonId" type="button" class="btn btn-info btn-lg" onclick="takePhoto()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
-      <br>
-      <p id="photoStatusId"></p>
-  </div>
-<!--  Camera Tab - End  -->
+    </div>
+    <!-- Login Tab - End -->
 
-  
-<!--  Info Tab - Start  -->
-  <div class="divider" >
-    <button onclick="toggle(this, 'Info')"> Info </button>
-  </div>
-  <h3></h3>
-  <div id="Info"  class="content">
-    <p>
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat laborum animi dolorem dolor suscipit, architecto maiores esse nihil quod beatae velit sapiente repudiandae natus culpa laboriosam provident debitis ipsum voluptatibus.
-    </p>
-  </div>
-<!--  Info Tab - End  -->
-   <script type="text/javascript" src="index.js"></script>
+    <div class='break'></div>
+
+    <!--  Home Tab - Start  -->
+    <div class="divider">
+        <button onclick="toggle(this, 'Home')"> Home </button>
+    </div>
+    <h3></h3>
+
+    <div id="Home" class="content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum tempore, in, sunt porro ullam recusandae vero, tempora ea dicta deserunt, explicabo alias. Excepturi aut numquam, inventore delectus. Autem, aut, sint!
+        </p>
+    </div>
+    <!--  Home Tab - End  -->
+    <div class='break'></div>
+
+    <!--  Camera Tab - Start  -->
+    <div class="divider">
+        <button onclick="toggle(this, 'Camera')"> Camera </button>
+    </div>
+    <h3></h3>
+    <div id="Camera" class="content">
+        <h3>Take Photo</h3>
+        <button id="takePhotoButtonId" type="button" class="btn btn-info btn-lg" onclick="takePhoto()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
+        <br>
+        <p id="photoStatusId"></p>
+    </div>
+    <!--  Camera Tab - End  -->
+    <!--  Info Tab - Start  -->
+    <div class="divider">
+        <button onclick="toggle(this, 'Info')"> Info </button>
+    </div>
+    <h3></h3>
+    <div id="Info" class="content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat laborum animi dolorem dolor suscipit, architecto maiores esse nihil quod beatae velit sapiente repudiandae natus culpa laboriosam provident debitis ipsum voluptatibus.
+        </p>
+    </div>
+    <!--  Info Tab - End  -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
