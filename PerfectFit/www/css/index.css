@@ -58,5 +58,9 @@ ul.tab li a:focus, .active {
 h3 {
 	font-size: 				4vh;
 	margin-bottom:  		2vh;
-}		
+}	
+
+th, td{
+    padding: 2vw;
+}	
 

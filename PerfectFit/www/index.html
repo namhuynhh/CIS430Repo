@@ -30,7 +30,7 @@
 		<li><a href="#" class="tabLink"  id="home"   onclick="showTab(event, 'Login')">Login</a></li>
 		<li><a href="#" class="tabLink" 			 onclick="showTab(event, 'Take'  )">Take Photo</a></li>
 		<li><a href="#" class="tabLink"           	 onclick="showTab(event, 'Show')">Show Photo</a></li>
-		<li><a href="#" class="tabLink"              onclick="showTab(event, 'Result' )">Result</a></li>
+		<li><a href="#" class="tabLink"              onclick="showTab(event, 'Result' ); displayResults();">Results</a></li>
 		
 	</ul>
 
@@ -79,7 +79,40 @@
 	</div>
 
 	<div id="Result" 	class="tabContent" style="background-color: rgba(0, 0, 255, 0.650)">
-		<h3>Result</h3>
+		<h3>Results:</h3>
+		<h2 id="resultStatement"></h2>
+			<table id="resultsTable">
+				<tr>
+					<th>Dimension</th>
+					<th>Your measurements</th>
+					<th>This item</th>
+				</tr>
+				<tr class="top">
+					<td>Bust:</td>
+					<td id="yourBust"></td>
+					<td id="bustResult"></td>
+				</tr>
+				<tr class="top bottom">
+					<td>Waist:</td>
+					<td id="yourWaist"></td>
+					<td id="waistResult"></td>
+				</tr>
+				<tr class="bottom">
+					<td>Hips:</td>
+					<td id="yourHips"></td>
+					<td id="hipsResult"></td>
+				</tr>
+				<tr class="bottom">
+					<td>Inseam:</td>
+					<td id="yourInseam"></td>
+					<td id="inseamResult"></td>
+				</tr>
+				<tr class="bottom">
+					<td>Style Match:</td>
+					<td></td>
+					<td id="styleResult"></td>
+				</tr>
+			</table>
 		
 	</div>
 

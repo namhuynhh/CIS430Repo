@@ -14,7 +14,18 @@ var photoStatus
 var photoImage     
 var cameraOptions  
 var imageFilename
-var options        
+var options 
+
+var yourBust
+var yourWaist
+var yourHips
+var yourInseam
+var itemBust
+var itemWaist
+var itemHips
+var itemInseam
+var itemStyle 
+var resultStatement      
 
 /* wait until all phonegap/cordova is loaded then call onDeviceReady*/
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -62,6 +73,39 @@ function photoError(errorMessage) {
 
 function showHomeTab() {
 	document.getElementById('home').click();
+}
+
+function displayResults() {
+    fakeMeasurementAPI(photoImage);
+    document.getElementById('yourBust').innerHTML = yourBust;
+    document.getElementById('yourWaist').innerHTML = yourWaist;
+    document.getElementById('yourHips').innerHTML = yourHips;
+    document.getElementById('yourInseam').innerHTML = yourInseam;
+    document.getElementById('bustResult').innerHTML = itemBust;
+    document.getElementById('waistResult').innerHTML = itemWaist;
+    document.getElementById('hipsResult').innerHTML = itemHips;
+    document.getElementById('inseamResult').innerHTML = itemInseam;
+    document.getElementById('styleResult').innerHTML = itemStyle;
+    document.getElementById('resultStatement').innerHTML = resultStatement;
+
+}
+
+function fakeMeasurementAPI(clothingPhoto, personPhoto)
+{
+    yourBust = "45in";
+    yourWaist = "28in";
+    yourHips = "32in";
+    yourInseam = "32in";
+
+
+    itemBust = "45in";
+    itemWaist = "28in";
+    itemHips = "32in";
+    itemInseam = "32in";
+    itemStyle = "95%";
+
+    resultStatement = "It's a perfect fit!";
+
 }
 
 function showTab(event, tabName) {
