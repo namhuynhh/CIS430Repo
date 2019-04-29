@@ -21,6 +21,10 @@ ul.tab {
     background-color: 		#f1f1f1;
 }
 
+header {
+    height: 10vh;
+}
+
 /* Float the list items side by side */
 ul.tab li {
 	float: 					left;
@@ -33,8 +37,11 @@ ul.tab li a {
     padding:                3vh 1vh 0vh 1vh; /* top right bot left */
     text-decoration: 		none;  /* remove underline for the <a> */
     transition: 			0.3s;
-    font-size: 				3vh;
-    height: 				10vh;
+    font-size: 				100%;
+    border: 1px solid black;
+    text-align: center;
+    width: 25vw;
+    height: 10vh;
 }
 
 /* Change background color of links on hover */
@@ -62,5 +69,6 @@ h3 {
 
 th, td{
     padding: 2vw;
+    font-size: 3vh;
 }	
 

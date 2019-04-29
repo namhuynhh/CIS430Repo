@@ -25,14 +25,14 @@
 
 
 <body> <!-- no onload - see index.js for "ondeviceready" event listener -->
-
-	<ul class="tab">
-		<li><a href="#" class="tabLink"  id="home"   onclick="showTab(event, 'Login')">Login</a></li>
-		<li><a href="#" class="tabLink" 			 onclick="showTab(event, 'Take'  )">Take Photo</a></li>
-		<li><a href="#" class="tabLink"           	 onclick="showTab(event, 'Show')">Show Photo</a></li>
-		<li><a href="#" class="tabLink"              onclick="showTab(event, 'Result' ); displayResults();">Results</a></li>
-		
-	</ul>
+	<header>
+		<ul class="tab">
+			<li><a href="#" class="tabLink"  id="home"   onclick="showTab(event, 'Login')">Login</a></li>
+			<li><a href="#" class="tabLink" 			 onclick="showTab(event, 'Take'  )">Take Photo</a></li>
+			<li><a href="#" class="tabLink"           	 onclick="showTab(event, 'Show')">Show Photo</a></li>
+			<li><a href="#" class="tabLink"              onclick="showTab(event, 'Result' ); displayResults();">Results</a></li>			
+		</ul>
+	</header>
 
 	<div id="Login" class="tabContent">
 		<h3>Login</h3>
@@ -44,10 +44,13 @@
   			<div class="container">
     			<label for="uname"><b>Username</b></label>
     				<input type="text" placeholder="Enter Username" name="uname" required>
+			</div>
 
+			<div class="container">
     			<label for="psw"><b>Password</b></label>
     				<input type="password" placeholder="Enter Password" name="psw" required>
-
+			</div>
+    		<div>	
     			<button type="submit">Login</button>
     			<label>
       				<input type="checkbox" checked="checked" name="remember"> Remember me
@@ -84,8 +87,8 @@
 			<table id="resultsTable">
 				<tr>
 					<th>Dimension</th>
-					<th>Your measurements</th>
-					<th>This item</th>
+					<th>Your Measurements</th>
+					<th>This Item</th>
 				</tr>
 				<tr class="top">
 					<td>Bust:</td>
