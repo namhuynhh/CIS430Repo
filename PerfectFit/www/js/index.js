@@ -27,12 +27,27 @@ var itemInseam
 var itemStyle 
 var resultStatement      
 
+var mysqlServerElem;
+var mysqlUsernameElem;
+var mysqlPasswordElem;
+var mysqlDatabaseElem;
+
+var mysqlServerSetting;
+var mysqlUsernameSetting;
+var mysqlPasswordSetting;
+var mysqlDatabaseSetting;
+
 /* wait until all phonegap/cordova is loaded then call onDeviceReady*/
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
 
+    
+    mysqlUsernameElem = document.getElementById('mysqlUsernameId');    
+    mysqlPasswordElem = document.getElementById('mysqlPasswordId');
+    
     StatusBar.overlaysWebView(false); // force ios to show status bar
+    loadSettings()
 	showHomeTab();
 
     takePhotoButton = document.getElementById('takePhotoButtonId')
@@ -129,6 +144,43 @@ function showTab(event, tabName) {
     document.getElementById(tabName).style.display = "block";
     event.currentTarget.className += " active";
 }		
+
+function loadSettings() {
+    mysqlServerElem.value   = 'sql.wpc-is.online';
+    mysqlUsernameElem.value = localStorage.mysqlUsernameSetting || 'ddang';
+    mysqlPasswordElem.value = localStorage.mysqlPasswordSetting || 'ddan8659';
+    mysqlDatabaseElem.value = localStorage.mysqlDatabaseSetting || 'db_test_dang';
+}
+
+function saveSettings() {
+    var checkBox = document.getElementById("myCheck");
+    if(checkBox.checked == true)
+    localStorage.mysqlUsernameSetting = mysqlUsernameElem.value;
+    localStorage.mysqlPasswordSetting = mysqlPasswordElem.value;
+    
+}
+
+function login() {
+        MySql.Execute(
+            "52.42.131.91",            // mySQL server
+            "ddang",                        // login name
+            "ddan8659",        // login password
+            "db_test_ddang",        // database to use
+                                            // SQL query string
+            "Select User, Password From Login WHERE User = 'mysqlUsernameElem.value' AND Password = 'mysqlPasswordElem.value'",
+            function (data) {
+                processTestResult(data);
+            }
+        );
+}
+
+function processTestResult(queryReturned) {
+    if (!queryReturned.Success) {
+        document.getElementById("status").innerHTML = queryReturned.Error;
+    } else {
+        document.getElementById("status").innerHTML = "Login!";
+    }
+}
 // function toggle(icon, content) {
 //             var currentTransform = icon.style.transform;
 //             console.log(currentTransform);

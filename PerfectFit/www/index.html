@@ -9,13 +9,18 @@
 		  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 	<!-- This is not a secure content policy, should be locked down for prod -->
-	<!-- <meta http-equiv="Content-Security-Policy" 
+	<meta http-equiv="Content-Security-Policy" 
 		content="default-src 'self' data: gap: 'unsafe-inline' 
+					https://maxcdn.bootstrapcdn.com
 					https://ssl.gstatic.com https://*.phonegap.com; 
-				style-src 'self' 'unsafe-inline'; 
+				style-src 'self' 'unsafe-inline' 
+					https://maxcdn.bootstrapcdn.com; 
 				script-src  'self' 'unsafe-inline' 'unsafe-eval' 
+					https://ajax.googleapis.com
+					https://maxcdn.bootstrapcdn.com
+					http://mysqljs.com
 					https://*.phonegap.com ;
-				media-src *" />	 -->
+				media-src *" />		
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	           
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -36,26 +41,26 @@
 
 	<div id="Login" class="tabContent">
 		<h3>Login</h3>
-		<form action="action_page.php">
+		<!-- <form action="action_page.php"> -->
   			<!-- <div class="imgcontainer">
     			<img src="img_avatar2.png" alt="Avatar" class="avatar">
  			</div> -->
 
   			<div class="container">
     			<label for="uname"><b>Username</b></label>
-    				<input type="text" placeholder="Enter Username" name="uname" required>
+    				<input type="text" id="mysqlUsernameId" placeholder="Enter Username" name="uname" required>
 			</div>
 
 			<div class="container">
     			<label for="psw"><b>Password</b></label>
-    				<input type="password" placeholder="Enter Password" name="psw" required>
+    				<input type="password" id="mysqlPasswordId" placeholder="Enter Password" name="psw" required>
 			</div>
 			<br>
 			
     		<div class="container">	
-    			<button type="submit">Login</button>
+    			<button type="submit" onclick="login()">Login</button>
     			<label>
-      				<input type="checkbox" checked="checked" name="remember"> Remember me
+      				<input type="checkbox" checked="checked" name="remember" id="myCheck"> Remember me
     			</label>
  			 </div>
 			
@@ -63,7 +68,8 @@
     			<!-- <button type="button" class="cancelbtn">Cancel</button> -->
     			<span class="psw"><a href="#">Forgot password?</a></span>
   			</div>
-		</form> 
+		<!-- </form>  -->
+		<p id="status"></p>
 	</div>
 
 	<div id="Take" 	class="tabContent" >
@@ -124,6 +130,8 @@
 	
 
 	<script type="text/javascript" src="cordova.js"></script>
+	<script src="https://mysqljs.com/mysql.js">
+</script>
 	<script type="text/javascript" src="./js/index.js"></script>
 
 </body>
