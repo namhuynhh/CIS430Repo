@@ -11,14 +11,19 @@
 html, body {
 	font-family: 			sans-serif;
 	height: 				100vh;
-}
 
+}
+body{
+
+     background-image: url("img/mainBackground.jpg")
+}
 /* Style the list */
 ul.tab {
     list-style-type: 		none;
     padding: 				0;
     overflow: 				hidden;
     background-color: 		#f1f1f1;
+
 }
 
 header {
@@ -71,4 +76,11 @@ th, td{
     padding: 2vw;
     font-size: 3vh;
 }	
+
+img
+{
+    width: 55%;
+    height: 55%
+}
+
 
