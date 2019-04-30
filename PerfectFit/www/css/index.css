@@ -14,8 +14,10 @@ html, body {
 
 }
 body{
-
-     background-image: url("img/mainBackground.jpg")
+     background-size: 100vw 75vh;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-image: url("img/mainBackground2.jpg")
 }
 /* Style the list */
 ul.tab {
