@@ -47,13 +47,13 @@ function onDeviceReady(){
     mysqlPasswordElem = document.getElementById('mysqlPasswordId');
     
     StatusBar.overlaysWebView(false); // force ios to show status bar
-    loadSettings()
+    
 	showHomeTab();
 
     takePhotoButton = document.getElementById('takePhotoButtonId')
     photoStatus     = document.getElementById('photoStatusId')
     photoImage      = document.getElementById('photoImageId')
-    imageFilename   = document.getElementById('imageFilenameId')
+    // imageFilename   = document.getElementById('imageFilenameId')
     cameraOptions   = document.getElementById('cameraOptionsId')
 
     options         = {
@@ -64,11 +64,12 @@ function onDeviceReady(){
             mediaType:          Camera.MediaType.PICTURE,
             encodingType:       Camera.EncodingType.JPEG,
             cameraDirection:    Camera.Direction.BACK,
-            targetWidth:        300,
+            targetWidth:        400,
             targetHeight:       400        
     }
 
     cameraOptions.innerHTML = JSON.stringify(options, null, 2)
+    loadSettings()
 }
 
 function takePhoto() {
@@ -77,7 +78,7 @@ function takePhoto() {
 
 function photoSuccess(imageURI) {
     photoStatus.innerHTML = "Success!";
-    imageFilename.innerHTML = imageURI;
+    // imageFilename.innerHTML = imageURI;
     photoImage.src = imageURI
 }
 
