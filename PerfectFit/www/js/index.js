@@ -8,13 +8,16 @@
 /*===========================*/
 /* put global variables here */
 /*===========================*/
+var takeSelfieButton
+var selfieStatus
+var selfieImage 
 
 var takePhotoButton
 var photoStatus    
-var photoImage     
+var photoImage 
+
 var cameraOptions  
-var imageFilename
-var options 
+var options
 
 var yourBust
 var yourWaist
@@ -53,8 +56,10 @@ function onDeviceReady(){
     takePhotoButton = document.getElementById('takePhotoButtonId')
     photoStatus     = document.getElementById('photoStatusId')
     photoImage      = document.getElementById('photoImageId')
-    // imageFilename   = document.getElementById('imageFilenameId')
     cameraOptions   = document.getElementById('cameraOptionsId')
+    takeSelfieButton = document.getElementById('takeSelfieButtonId');
+    selfieStatus = document.getElementById('selfieStatusId');
+    selfieImage = document.getElementById('selfieImageId');
 
     options         = {
             quality: 100,
@@ -68,8 +73,22 @@ function onDeviceReady(){
             targetHeight:       400        
     }
 
-    cameraOptions.innerHTML = JSON.stringify(options, null, 2)
+    // cameraOptions.innerHTML = JSON.stringify(options, null, 2)
     loadSettings()
+}
+
+function takeSelfie() {
+    navigator.camera.getPicture(selfieSuccess, selfieError, options)
+}
+
+function selfieSuccess(imageURI) {
+    selfieStatus.innerHTML = "Looking good!";
+    selfieImage.src = imageURI
+    selfieImage.style.display = "block";
+}
+
+function selfieError(errorMessage) {
+    selfieStatus.innerHTML = "Failed: " + errorMessage;
 }
 
 function takePhoto() {
@@ -77,14 +96,13 @@ function takePhoto() {
 }
 
 function photoSuccess(imageURI) {
-    photoStatus.innerHTML = "Success!";
-    // imageFilename.innerHTML = imageURI;
+    photoStatus.innerHTML = "Good choice!";
     photoImage.src = imageURI
+    photoImage.style.display = "block";
 }
 
 function photoError(errorMessage) {
     photoStatus.innerHTML = "Failed: " + errorMessage;
-    imageFilename.innerHTML = "";
 }
 
 function showHomeTab() {

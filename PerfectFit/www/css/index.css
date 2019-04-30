@@ -85,4 +85,10 @@ img
     height: 55%
 }
 
+#photoImageId, #selfieImageId{
+    width: 80vw;
+    height: 55vh;
+    display: none;
+}
+
 

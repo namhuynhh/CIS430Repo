@@ -40,8 +40,8 @@
 	<header>
 		<ul class="tab">
 			<li><a href="#" class="tabLink"  id="home"   onclick="showTab(event, 'Login')">Login</a></li>
-			<li><a href="#" class="tabLink" 			 onclick="showTab(event, 'Take')">Take Photo</a></li>
-			<li><a href="#" class="tabLink"           	 onclick="showTab(event, 'Show')">Show Photo</a></li>
+			<li><a href="#" class="tabLink" 			 onclick="showTab(event, 'Take')">You</a></li>
+			<li><a href="#" class="tabLink"           	 onclick="showTab(event, 'Show')">Clothing Item</a></li>
 			<li><a href="#" class="tabLink"              onclick="showTab(event, 'Result' ); displayResults();">Results</a></li>			
 		</ul>
 	</header>
@@ -80,24 +80,27 @@
 	</div>
 
 	<div id="Take" 	class="tabContent" >
-		<h3>Camera</h3>
-		<button id="takePhotoButtonId" type="button" class="btn btn-info btn-lg" onclick="takePhoto()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
+		<h3>Selfie time</h3>
+		<button id="takeSelfieButtonId" type="button" class="btn btn-info btn-lg" onclick="takeSelfie()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
 		<br>
-		<p id="photoStatusId"></p>
+		<p id="selfieStatusId"></p>
+		<img id="selfieImageId" src="#" alt="photo">
 
 	</div>
 
 	<div id="Show" class="tabContent">
 
-		<h3>Photo</h3>
-		<p><img src="img/sample.jpg" alt="image" id="photoImageId"></p>
+		<h3>Clothing item</h3>
+		<button id="takePhotoButtonId" type="button" class="btn btn-info btn-lg" onclick="takePhoto()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
 		<br>
-		<!-- <pre id=imageFilenameId></pre> -->
+		<p id="photoStatusId"></p>
+		<img id="photoImageId" src="#" alt="photo">
+		
 
 	</div>
 
 	<div id="Result" 	class="tabContent" >
-		<h3>Profile</h3>
+		<h3>Results</h3>
 		<h2 id="resultStatement"></h2>
 			<table id="resultsTable">
 				<tr>
