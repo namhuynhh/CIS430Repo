@@ -5,11 +5,11 @@
 
 * {
 	margin: 				0;
-	box-sizing: 			border-box;			
-}
+	box-sizing: 			border-box;		
+   }
 
 html, body {
-	font-family: 			sans-serif;
+	
 	height: 				100vh;
 
 }
@@ -32,6 +32,7 @@ header {
     height: 10vh;
 }
 
+
 /* Float the list items side by side */
 ul.tab li {
 	float: 					left;
@@ -49,16 +50,22 @@ ul.tab li a {
     text-align: center;
     width: 25vw;
     height: 10vh;
+    background-color: #5D5C61;
+   
+ 
+
+
+
 }
 
 /* Change background color of links on hover */
 ul.tab li a:hover {
-	background-color: 		#ddd;
+	background-color: 		#379683;
 }
 
 /* Create an active/current tablink class */
 ul.tab li a:focus, .active {
-	background-color: 		#ccc;
+	background-color: 		#557A95;
 }
 
 /* Style the tab content */
@@ -67,6 +74,14 @@ ul.tab li a:focus, .active {
     padding: 				10vw 10vw;
     height: 				90vh;
     font-size: 				2.5vh;
+    background-color:       #7395AE;
+    color: white;
+
+
+}
+.container input
+{
+   text-align: center;
 }
 
 h3 {
@@ -89,6 +104,11 @@ img
     width: 80vw;
     height: 55vh;
     display: none;
+}
+button
+{
+    opacity: .25;
+    color: white;
 }
 
 

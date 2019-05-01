@@ -22,29 +22,24 @@
 					https://*.phonegap.com ;
 				media-src *" />		
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	           
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<style>
-		body{
-			background-image: url("img/mainBackground2.jpg");
-			background-size: 100vw 75vh;
-			background-position: center;
-			background-repeat: no-repeat;
-		}
-		
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+
+
 </head>
 
 <body> <!-- no onload - see index.js for "ondeviceready" event listener -->
 	<header>
 		<ul class="tab">
 			<li><a href="#" class="tabLink"  id="home"   onclick="showTab(event, 'Login')">Login</a></li>
-			<li><a href="#" class="tabLink" 			 onclick="showTab(event, 'Take')">You</a></li>
-			<li><a href="#" class="tabLink"           	 onclick="showTab(event, 'Show')">Clothing Item</a></li>
+			<li><a href="#" class="tabLink" 			 onclick="showTab(event, 'Take')">Personal</a></li>
+			<li><a href="#" class="tabLink"           	 onclick="showTab(event, 'Show')">Clothing</a></li>
 			<li><a href="#" class="tabLink"              onclick="showTab(event, 'Result' ); displayResults();">Results</a></li>			
 		</ul>
 	</header>
+	
 
 	<div id="Login" class="tabContent">
 		<h3>Login</h3>
@@ -80,7 +75,7 @@
 	</div>
 
 	<div id="Take" 	class="tabContent" >
-		<h3>Selfie time</h3>
+		<h3>Take a picture of yourself!</h3>
 		<button id="takeSelfieButtonId" type="button" class="btn btn-info btn-lg" onclick="takeSelfie()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
 		<br>
 		<p id="selfieStatusId"></p>
@@ -90,7 +85,7 @@
 
 	<div id="Show" class="tabContent">
 
-		<h3>Clothing item</h3>
+		<h3>Snap a picture of your clothes!</h3>
 		<button id="takePhotoButtonId" type="button" class="btn btn-info btn-lg" onclick="takePhoto()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
 		<br>
 		<p id="photoStatusId"></p>
@@ -143,6 +138,8 @@
 	<script type="text/javascript" src="cordova.js"></script>
 	<script src="https://mysqljs.com/mysql.js"></script>
 	<script type="text/javascript" src="./js/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 

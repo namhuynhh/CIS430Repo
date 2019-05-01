@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://use.fontawesome.com/aa95071b26.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" href="PerfectFitFinal.js"></script>
+<<link rel="stylesheet" href="PerfectFitFinal.css">
+<title>Perfect Fit</title>
+</head>
+<body>
+<div id="body">
+  <div class="out-wrap">
+  <ul id="tabs" class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+
+  </ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+   
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">   
+
+      <h3>Login</h3>
+    <!-- <form action="action_page.php"> -->
+        <!-- <div class="imgcontainer">
+          <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div> -->
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+            <input type="text" id="mysqlUsernameId" placeholder="Enter Username" name="uname" required>
+      </div>
+
+      <div class="container">
+          <label for="psw"><b>Password</b></label>
+            <input type="password" id="mysqlPasswordId" placeholder="Enter Password" name="psw" required>
+      </div>
+      <br>
+      
+        <div class="container"> 
+          <button type="submit" onclick="login()">Login</button>
+          <label>
+              <input type="checkbox" checked="checked" name="remember" id="myCheck"> Remember me
+          </label>
+       </div>
+      
+        <div class="container">
+          <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+          <span class="psw"><a href="#">Forgot password?</a></span>
+        </div>
+    <!-- </form>  -->
+    <p id="status"></p>
+  </div>
+
+
+  <div id="Take"  class="tabContent" >
+    <h3>Take a picture of yourself!</h3>
+    <button id="takeSelfieButtonId" type="button" class="btn btn-info btn-lg" onclick="takeSelfie()"><span class="glyphicon glyphicon-camera"></span> Camera</button>
+    <br>
+    <p id="selfieStatusId"></p>
+    <img id="selfieImageId" src="#" alt="photo">
+  </div>
+
+
+    <div role="tabpanel" class="tab-pane" id="messages"></div>
+
+
+    <div role="tabpanel" class="tab-pane" id="settings"></div>
+    
+  
+    
+   
+  </div>
+</div>
+
+  
+
+  
+</body>
+</html>
