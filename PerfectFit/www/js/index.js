@@ -181,10 +181,10 @@ function saveSettings() {
 
 function login() {
         MySql.Execute(
-            "52.42.131.91",            // mySQL server
+            "52.42.131.91",                 // mySQL server
             "ddang",                        // login name
-            "ddan8659",        // login password
-            "db_test_ddang",        // database to use
+            "ddan8659",                     // login password
+            "db_test_ddang",                // database to use
                                             // SQL query string
             "Select User, Password From Login WHERE User = 'mysqlUsernameElem.value' AND Password = 'mysqlPasswordElem.value'",
             function (data) {
@@ -200,20 +200,3 @@ function processTestResult(queryReturned) {
         document.getElementById("status").innerHTML = "Login!";
     }
 }
-// function toggle(icon, content) {
-//             var currentTransform = icon.style.transform;
-//             console.log(currentTransform);
-//             let nextTransform = "";
-//             let showOrHide = "";
-
-//             if (currentTransform === "rotate(0deg)" || currentTransform === ""){
-//                 nextTransform="rotate(90deg)";
-//                 showOrHide = "block";
-//             } else {
-//                 nextTransform="rotate(0deg)";           
-//                 showOrHide = "none";
-//             }
-
-//             icon.style.transform=nextTransform;
-//             document.getElementById(content).style.display=showOrHide;
-//         }

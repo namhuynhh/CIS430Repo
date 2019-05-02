@@ -23,11 +23,11 @@
     <name>Perfect Fit</name>
 
     <description>
-        An example of how to use the camera in a single page app
+        Find pefect fit clothes for yourself by using your phone camera
     </description>
 
     <author email="dmazzola@asu.edu" href="http://www.asu.edu">
-        Dan Mazzola
+        $teamname
     </author>
 
     <content src="index.html" />  <!-- the starting point of your hybrid app -->
