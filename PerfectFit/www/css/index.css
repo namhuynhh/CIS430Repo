@@ -5,7 +5,8 @@
 
 * {
 	margin: 				0;
-	box-sizing: 			border-box;		
+	box-sizing: 			border-box;	
+    font-family: "Arial Black", Gadget, sans-serif;	
    }
 
 html, body {
@@ -24,7 +25,8 @@ ul.tab {
     list-style-type: 		none;
     padding: 				0;
     overflow: 				hidden;
-    background-color: 		#f1f1f1;
+    background-color: 		rgb(99,166,159);
+   
 
 }
 
@@ -50,8 +52,8 @@ ul.tab li a {
     text-align: center;
     width: 25vw;
     height: 10vh;
-    background-color: #5D5C61;
-   
+    background-color: rgb(99,166,159);
+    color:  white;
  
 
 
@@ -60,12 +62,12 @@ ul.tab li a {
 
 /* Change background color of links on hover */
 ul.tab li a:hover {
-	background-color: 		#379683;
+	background-color: 		rgb(141,141,141);
 }
 
 /* Create an active/current tablink class */
 ul.tab li a:focus, .active {
-	background-color: 		#557A95;
+	background-color: 		rgb(141,141,141);
 }
 
 /* Style the tab content */
@@ -74,7 +76,7 @@ ul.tab li a:focus, .active {
     padding: 				10vw 10vw;
     height: 				90vh;
     font-size: 				2.5vh;
-    background-color:       #7395AE;
+    background-color:       rgb(99,166,159);
     color: white;
 
 
@@ -107,8 +109,9 @@ img
 }
 button
 {
-    opacity: .25;
-    color: white;
+    opacity: .95;
+    background-color: rgb(141,141,141);
+   
 }
 
 
